@@ -35,8 +35,8 @@
 
 ## Links
 
-- [Repository]()
-- [Deployed Application]()
+- [Repository](https://github.com/KSoto18/Tech-Space)
+- [Deployed Application](https://secret-journey-69446.herokuapp.com/login)
 
 
 <br>
