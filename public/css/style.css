@@ -1,0 +1,13 @@
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    border: solid black 2px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer {
+    position: relative;
+    bottom: 5%;
+    margin: 10px
+}
