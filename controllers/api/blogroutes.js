@@ -52,27 +52,22 @@ router.put('/:id', withAuth, async (req, res) => {
 
 // Delete a Blog by its ID
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
 
     try {
-        const [blogRows] = Blog.destroy({
-            where: {
-                id: req.params.id,
-            },
-        });
+      const deletedBlog = await Blog.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
 
-        if (blogRows > 0) {
-            res.status(200).json;
-
-        } else {
-            res.status(404).json({ message: 'Something went wrong!' });;
-        }
+      res.status(200).json(deletedBlog);
 
     } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     }
-});
+  });
 
 
 module.exports = router;
