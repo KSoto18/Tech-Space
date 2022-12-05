@@ -24,5 +24,5 @@ async function newHandler(event) {
   };
   
 document
-.querySelector('#new-blog-input')
+.querySelector('.new-blog')
 .addEventListener('submit', newHandler);
